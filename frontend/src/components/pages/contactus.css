@@ -1,0 +1,132 @@
+.contactus{
+    height: 120vh;
+    width: 100%;
+    padding-top: 140px;
+}
+
+.contact-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #f9cb9c 0%, #f6b26b 100%);
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.contact-content {
+  display: flex;
+  width: 100%;
+  max-width: 1000px;
+  gap: 50px;
+  align-items: flex-start;
+}
+
+/* Left side styling */
+.contact-info {
+  flex: 1;
+  color: black;
+}
+
+.contact-info h1 {
+  font-size: 2.5rem;
+  font-weight: 800;
+  margin-bottom: 10px;
+  color: black;
+}
+
+.contact-info p {
+  margin-bottom: 30px;
+  font-size: 0.95rem;
+  color: black;
+}
+
+.info-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+}
+
+.info-item span{
+    color: black;
+}
+
+.highlight-box {
+  background-color: rgba(255, 153, 0, 0.3);
+  padding: 15px;
+  border-radius: 12px;
+  width: fit-content;
+}
+
+/* Right side (Form) styling */
+.contact-form-wrapper {
+  flex: 1;
+  border: none;
+  background-color: #FFFFFF4D; /* The blue border from your screenshot */
+  padding: 30px;
+  border-radius: 10px;
+}
+
+.form-group {
+  margin-bottom: 20px;
+}
+
+.form-group label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: bold;
+  margin-bottom: 5px;
+  color: #333;
+}
+
+.form-group input, 
+.form-group textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 0.9rem;
+  outline: none;
+}
+
+.send-btn {
+  background-color: #ff8c00;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  display: block;
+  margin: 0 auto;
+  transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+  background-color: #e67e00;
+}
+
+/* Responsive fix */
+@media (max-width: 768px) {
+  .contact-content {
+    flex-direction: column;
+  }
+}
+
+.mapy{
+    background-image: url('../../assets/map.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    width: 100%;
+    position: relative;
+}
+
+.map-image{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+}

@@ -1,0 +1,145 @@
+.tit{
+    padding-top: 140px;
+    padding-left: 140px;
+    font-size: 18px;
+    font-weight: 900;
+}
+
+.tourpackagessection{
+    height: 450vh;
+    width: 100%;
+}
+
+.tourpackages{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 30px 140px 30px 140px;
+}
+
+.tourcard{
+    padding-bottom: 40px;
+    transition: all 1.5s ease;
+}
+
+.tourcard:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.tourimg{
+    width: 200px;
+    height: 250px;
+    border-radius: 15px;
+
+}
+
+.tourtitle{
+    color: black;
+    margin-top: 8px;
+}
+
+.layer1t{
+    display: flex;
+    flex-direction: row;
+    column-gap: 10px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.from{
+    color: black;
+    font-size: 12px;
+}
+
+.currency{
+    color: #FA8B02;
+    font-weight: 900;
+    font-size: 16px;
+}
+
+.layer2t{
+    display: flex;
+    flex-direction: row;
+    column-gap: 70px;
+}
+
+.layer2tt p{
+    color: #FA8B02;
+    font-size: 10px;
+}
+
+.layer2tt img{
+    width: 15px;
+    height: 15px;
+}
+
+.layer2tt{
+    display: flex;
+    flex-direction: row;
+    margin-top: 8px;
+    column-gap: 5px;
+    align-items: center;
+
+}
+
+.tourpara{
+    color: black;
+    font-size: 12px;
+    width: 200px;
+    line-height: 1.2;
+    margin-top: 6px;
+}
+
+.readmore{
+    color: #FA8B02;
+    font-size: 10px;
+    margin-top: 10px;
+    font-weight: 700;
+}
+
+.secomd-title{
+    font-size: 18px;
+    font-weight: 900;
+    color: black;
+    margin-top: 0px;
+    padding-left: 140px;
+}
+
+.services-grid{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    padding: 30px 140px 30px 140px;
+}
+
+.servicecard{
+    padding-bottom: 40px;
+    transition: all 1.5s ease;
+}
+
+.servicecard:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    border-radius: 10px;
+}
+
+.serviceimg{
+    width: 260px;
+    height: 200px;
+    border-radius: 15px;
+}
+
+.servicetitle{
+    color: black;
+    margin-top: 8px;
+    font-size: 14px;
+    font-weight: 600;
+}
+
+.servicepara{
+    color: black;
+    font-size: 12px;
+    width: 260px;
+    line-height: 1.2;
+    margin-top: 6px;
+}

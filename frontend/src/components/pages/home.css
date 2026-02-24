@@ -1,0 +1,798 @@
+.section-1{
+    width: 100%;
+    height: 100vh;
+    background-image: (url('../../assets/background1.png'));
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.home{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 10px;
+}
+
+.home h1{
+    font-size: 50px;
+    color: white;
+    font-family: 'Lobster Two', cursive;
+}
+
+.home p{
+    font-size: 18px;
+    color: white;
+    font-family: 'open sans', sans-serif
+    
+}
+
+
+
+/* Container positioning */
+.maincont {
+    width: 1040px;
+    height: 145px;
+    padding: 10px 0px 5px 0px;
+    max-width: 1200px;
+    margin: 40px auto;
+    background-color: rgba(255, 255, 255, 0.33);
+    border-radius: 10px;
+}
+
+/* Tabs Styling */
+.search-tabs {
+    display: flex;
+    margin-left: 20px;
+}
+
+.tab {
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px); /* The "glass" effect */
+    border: none;
+    padding: 12px 20px;
+    border-radius: 0px 10px 0 0;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-weight: 500;
+}
+
+.tab.active {
+    background: white;
+    color: #ff9800;
+    border-radius: 10px 0px 0 0;
+}
+
+/* White Bar Styling */
+.booking-bar {
+    width: 1000px;
+    background: white;
+    display: flex;
+    align-items: center;
+    padding: 15px 20px;
+    border-radius: 0 15px 15px 15px;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    margin-left: 20px;
+}
+
+.input-field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 0 10px;
+    border-right: 1px solid #eee;
+}
+
+.input-field.no-border {
+    border-right: none;
+}
+
+.input-field label {
+    font-size: 13px;
+    font-weight: 700;
+    color: #444;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 4px;
+}
+
+.input-field select, 
+.input-field input {
+    border: none;
+    outline: none;
+    font-size: 12px;
+    color: #888;
+    background: transparent;
+
+    -webkit-appearance: none; 
+    -moz-appearance: none;
+    appearance: none;
+}
+
+/* Search Button */
+.search-btn {
+    background: #ff9800;
+    color: white;
+    border: none;
+    width: 55px;
+    height: 55px;
+    border-radius: 12px;
+    cursor: pointer;
+    font-size: 18px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    transition: transform 0.2s;
+}
+
+.search-btn:hover {
+    transform: scale(1.05);
+    background: #e68a00;
+}
+
+.input-field input[type="date"]::-webkit-calendar-picker-indicator {
+    cursor: pointer;
+    opacity: 0.6; /* makes the calendar icon subtle */
+}
+
+.section-2{
+    height: 600vh;
+    width: 100%;
+
+}
+
+.top{
+    display: flex;
+    justify-content: space-between;
+    padding: 70px 200px 10px 200px;
+}
+
+.top h2{
+    font-size: 20px;
+    font-weight: 800;
+    color: black;
+    font-family: 'open sans', sans-serif;
+}
+
+.arrows{
+    display: flex;
+    gap: 20px;
+    cursor: pointer;
+}
+   
+.arrows img{
+    width: 30px;
+    height: 30px;
+}
+
+/* Section 2 Header */
+.section-2 {
+    background-color: #fff;
+}
+
+.section-2 .top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.arrows div img {
+    width: 35px;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.arrows div img:hover {
+    transform: scale(1.1);
+}
+
+/* Cards Grid */
+.cards {
+    width: 900px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 0 5%;
+}
+.card {
+    border-radius: 20px;
+    overflow: hidden;
+    transition: 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.card-image-container {
+    width: 100%;
+    height: 250px;
+}
+
+.card-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.card-content {
+    padding: 10px;
+}
+
+.card-content h3 {
+    font-size: 15px;
+    color: #333;
+    margin-bottom: 8px;
+}
+
+/* Price Section */
+.price-row {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.price-label {
+    font-size: 10px;
+    color: #777;
+}
+
+.price-value {
+    font-size: 12px;
+    font-weight: 800;
+    color: #ff9800; /* The orange from your image */
+}
+
+/* Icons/Meta Row */
+.card-meta {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+    border-top: 1px solid #f0f0f0;
+    padding-top: 5px;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.meta-icon {
+    color: #ff9800;
+    font-size: 10px;
+}
+
+.meta-item p {
+    font-size: 10px;
+    text-transform: uppercase;
+    font-weight: 600;
+    color: #FA8B02;
+    gap: 10px;
+}
+
+.card-description {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Clips text after 2 lines */
+    line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.left img{
+    width: 260px;
+    height: 360px;
+    margin-left: 120px;
+    transition: all 7s ease;
+}
+
+.left img:hover{
+    scale: 1.5;
+    rotate: 360deg ;
+}
+
+.after-cards{
+    margin-top: 90px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+}   
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right h1{
+    font-size: 25px;
+    color: #000000;
+    font-weight: 900;
+    margin-bottom: 15px;
+}
+
+.description{
+    font-size: 12px;
+    color: #333333;
+    line-height: 1.6;
+    width: 400px;
+}
+
+.title{
+    font-size: 9px;
+    color: black;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 0px;
+    padding: 15px 200px 0px 0px;
+}
+
+.stat-item h2 {
+    color: #ff9800; /* Matching your orange theme */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #888;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Responsive Fix for mobile */
+@media (max-width: 900px) {
+    .after-cards {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 on smaller screens */
+        gap: 30px;
+    }
+}
+
+.weird-sec{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100%;
+    background-image: url('../../assets/weirdsec.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    margin-top: 150px;
+    height: 300px;
+    position: relative;
+}
+
+.container-2{
+    color: black;
+    background-color: #FFFFFF4D;
+    width: 350px;
+    height: 170px;
+    margin-left: 80px;
+    margin-top: 60px;
+    padding: 30px 0px 30px 0px;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+.container-2 h1{
+    font-size: 18px;
+    color: black;
+    text-align: center;
+    font-weight: 900;
+    font-family: 'open sans', sans-serif;
+}
+
+.container-2 p{
+    font-size: 11px;
+    text-align: center;
+    color: black;
+    font-family: 'open sans', sans-serif;
+}
+
+.container-2 button{
+    display: flex;
+    text-align: center;
+    color: white;
+    background-color: #FA8B02;
+    border-radius: 20px;
+    border: none;
+    padding: 5px 25px;
+}
+
+.weird2{
+    margin-top: 20px;
+}
+
+.weird-img{
+   position: absolute;
+   bottom: 20px;
+   height: 400px;
+
+}
+
+/* Container for the 4 service cards */
+.services-section {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    padding: 60px 13%;
+    max-width: 1200px;
+    margin: 10px auto;
+}
+
+.service-card {
+    text-align: left;
+    width: 200px;
+    transition: all 2s ease;
+}
+
+.service-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+    border-radius: 20px;
+    padding: 10px 5px;
+}
+
+/* Rounded image styling */
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 25px; /* Large rounded corners */
+    margin-bottom: 20px;
+    transition: all 2s ease;
+}
+
+.service-card img:hover{
+    transform: scale(1.1);
+    rotate: 25deg ;
+}
+
+.service-card h3 {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 10px;
+    font-weight: 700;
+}
+
+.service-card p {
+    font-size: 10px;
+    color: #666;
+    line-height: 1.5;
+    font-family: 'open sans', sans-serif;
+}
+
+
+/* Responsive Fix */
+@media (max-width: 1024px) {
+    .services-section {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 grid on tablets */
+    }
+}
+
+@media (max-width: 600px) {
+    .services-section {
+        grid-template-columns: 1fr; /* Stacked on mobile */
+    }
+}
+
+.another-sec{
+    background-image: url('../../assets/weirdsec.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;  
+    width: 100%;
+    height: 500px; 
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+/* Container for the whole form area */
+.form-cont {
+    background-color: rgba(255, 255, 255, 0.3); /* Glass effect */
+    backdrop-filter: blur(10px);
+    width: 550px; /* Increased width to prevent squishing */
+    padding: 30px 15px 10px 15px;
+    height: 360px;
+    margin-top: 40px;
+    margin-left: 80px;
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 1s ease;
+}
+
+.form-cont:hover{
+    transform: scale(1.1);
+}
+
+/* Remove your multiple .form-grid classes and use one wrapper */
+.form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr; /* Two equal columns */
+    gap: 20px 30px; /* Vertical and Horizontal spacing */
+    width: 100%;
+}
+
+.individual-input {
+    display: flex;
+    flex-direction: column;
+}
+
+.individual-input label {
+    color: black;
+    font-weight: 600;
+    font-size: 14px;
+    margin-bottom: 8px;
+    text-transform: capitalize;
+}
+
+/* Styled Inputs and Selects */
+.individual-input input, 
+.individual-input select {
+    width: 100% !important; /* Take up full column width */
+    height: 40px; /* Taller for better UX */
+    padding: 0 15px;
+    border: none;
+    border-radius: 8px;
+    background-color: white;
+    font-size: 14px;
+    color: #333;
+    outline: none;
+}
+
+/* Focus state for a premium feel */
+.individual-input input:focus {
+    box-shadow: 0 0 0 3px rgba(255, 152, 0, 0.4);
+}
+
+/* Submit Button Container */
+.button-container {
+    grid-column: span 2; /* Stretch across both columns */
+    display: flex;
+    justify-content: center;
+    margin-top: 10px;
+}
+
+.submit-btn {
+    background-color: #ff9800; /* Matching your orange theme */
+    color: white;
+    border: none;
+    padding: 10px 50px;
+    border-radius: 50px;
+    font-weight: 700;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.submit-btn:hover {
+    background-color: #e68a00;
+    transform: scale(1.05);
+}
+
+
+.form-left h1{
+    color: black;
+    text-align: center;
+    font-family: 'open sans', sans-serif;
+    font-size: 22px;
+    font-weight: 900;
+    margin-top: 20px;
+}
+
+.img-sec img{
+    width: 500px;
+    transform: scaleX(-1);
+    margin-top: 140px;
+    margin-left: 10px;
+}
+
+.packages-section {
+  padding: 60px 10%;
+  background-color: #fff;
+}
+
+.packages-title {
+  font-size: 20px;
+  margin-left: 15px;
+    font-family: 'open sans', sans-serif;
+  font-weight: 800;
+  margin-bottom: 40px;
+  color: #333;
+}
+
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+  border: 1px solid white; /* The blue border from your image */
+  padding: 20px;
+  border-radius: 8px;
+}
+
+.package-card {
+  border: 1px solid #ccc; /* Dashed separators between cards */
+  display: flex;
+  flex-direction: column;
+  border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    box-shadow: #333 5px 5px 10px -10px;
+    transition: all 0.5s ease;
+}
+
+.package-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.package-image img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10px;
+}
+
+.package-content {
+  padding: 20px 10px;
+}
+
+.package-content h4 {
+  font-size: 0.9rem;
+  font-family: 'open sans', sans-serif;
+    font-weight: 900;
+  color: #555;
+  margin-bottom: 15px;
+}
+
+.package-price {
+  margin-bottom: 20px;
+  display: flex;
+  align-items: baseline;
+}
+
+.package-price .currency {
+  font-size: 0.8rem;
+  color: #ff9900;
+  margin-right: 5px;
+}
+
+.package-price .amount {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #ff9900;
+}
+
+.package-price .duration {
+  font-size: 0.8rem;
+  color: #999;
+  margin-left: 5px;
+}
+
+.package-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.package-features li {
+  display: flex;
+  align-items: center;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 15px;
+}
+
+.feat-icon {
+  color: #ff9900;
+  margin-right: 10px;
+  font-size: 1rem;
+}
+
+.package-btn {
+  width: 100%;
+  padding: 10px;
+  background: none;
+  border: 1px solid #ff9900;
+  color: #ff9900;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.package-btn:hover {
+  background: #ff9900;
+  color: #fff;
+}
+
+/* Responsive for smaller screens */
+@media (max-width: 1024px) {
+  .packages-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.testimonials-grid{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding: 0px 170px;
+}
+
+.testimonial-card{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    border: 1px solid rgba(0, 0, 1, 0.044);
+    width: 400px;
+    border-radius: 20px;
+    padding: 20px 0px 30px 0px;
+    box-shadow: #333 5px 5px 10px -10px;
+    transition: all 0.5s ease;
+}
+
+.testimonial-card:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+.user-avatar{
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+    border-radius: 50%;
+}
+
+.user-name{
+    display: block;
+    font-size: 12px;
+    color: black;
+    margin-top: 10px;
+}
+
+.testimonial-text{
+    color: black;
+    font-size: 12px;
+    width: 350px;
+    line-height: 1.5;
+}

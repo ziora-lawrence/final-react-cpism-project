@@ -1,0 +1,187 @@
+.aboutus{
+    height: 100vh;
+    width: 100%;
+    background-image: url('../../assets/aboutusback.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.aboutus h1{
+    font-size: 45px;
+    color: white;
+    font-family: 'Lobster Two', cursive;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+
+.aboutus p{
+    font-size: 15px;
+    color: white;
+    font-family: 'open sans', sans-serif;
+    width: 520px;
+    text-align: center;
+    font-weight: 700;
+    line-height: 1.5;
+}
+
+.aboutus button{
+    margin-top: 25px;
+    background-color: transparent;
+    border: 1px solid white;
+    padding: 9px 18px;
+    border-radius: 20px;
+    transition: all 0.5s ease;
+}
+
+.aboutus button:hover{
+    background-color: white;
+    color: black;
+    scale: 1.05;
+    font-family: 'open sans' sans-serif;
+    font-weight: 700;;
+}
+
+.section2{
+    height: 180vh;
+    width: 100%;
+}
+
+.second{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    margin-top: 90px;
+}
+
+.left{
+    border: none;
+    width: 390px;
+    margin-left: 50px;
+   
+}
+
+.something-pic{
+    width: 100%;
+    height: auto;
+    border-radius: 20px;
+    transition: all 7s ease;
+
+}
+
+.something-pic:hover{
+    scale: 1.1;
+    rotate: 360deg ;
+}
+
+
+.right{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.right h1{
+    font-size: 22px;
+    font-family: 'open sans', sans-serif;
+    color: #000000;
+    font-weight: 900;
+    margin-bottom: 15px;
+    width: 500px;
+}
+
+.description{
+    font-size: 10px;
+    font-family: 'open sans', sans-serif;
+    color: #333333;
+    line-height: 1.6;
+    width: 400px;
+}
+
+.title{
+    font-size: 9px;
+    color: black;
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    gap: 0px;
+    padding: 15px 200px 0px 0px;
+}
+
+.stat-item h2 {
+    color: #ff9800; /* Matching your orange theme */
+    font-size: 20px;
+    margin-bottom: 5px;
+}
+
+.stat-item p {
+    color: #888;
+    font-size: 10px;
+    line-height: 1.2;
+    font-weight: 500;
+}
+
+/* Responsive Fix for mobile */
+@media (max-width: 900px) {
+    .after-cards {
+        flex-direction: column;
+        text-align: center;
+    }
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2x2 on smaller screens */
+        gap: 30px;
+    }
+}
+
+.small-sec{
+    width: 100%;
+    height: 240px;
+    margin-top: 80px;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 40px 80px 0px 80px;
+}
+
+.card-cont {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFFFFF4D; 
+    border-radius: 10px;
+    width: 200px;
+    height: 120px;
+    padding: 10px;
+    margin: 10px; 
+    text-align: center;
+    transition: all 2s ease;
+}
+
+.card-cont img {
+    width: 30px; 
+    height: 30px;
+    margin-bottom: 10px;
+}
+
+.card-cont p {
+    color: #333; 
+    font-size: 14px;
+    font-weight: bold;
+    font-family: 'open sans', sans-serif;
+}
+
+.card-cont:hover{
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+

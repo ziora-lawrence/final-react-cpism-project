@@ -1,0 +1,75 @@
+.container{
+    background-color: rgba(173, 131, 131, 0.553);
+    padding: 10px 150px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav img{
+    width: 80px;
+    height: 80px;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.nav img:hover{
+    scale: 1.1; 
+
+}
+
+.nav ul{
+    display: flex;
+    list-style: none;
+    column-gap: 20px;
+    color: white;
+}
+
+.nav-btns{
+    display: flex;
+    column-gap: 5px;
+
+}
+
+.login{
+    padding: 10px 20px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.login:hover{
+    background-color: white;
+    color: black;
+    scale: 1.05;
+    border-radius: 20px;
+}
+
+.nav-btns select{
+    border: 1px solid white;
+    background-color: transparent;
+    cursor: pointer;
+
+}
+
+.signup{
+    padding: 10px 35px;
+    background-color: #FA8B02;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease;
+}
+
+.signup:hover{
+    background-color: white;
+    color: black;
+    scale: 1.05;
+}
