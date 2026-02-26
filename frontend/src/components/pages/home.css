@@ -796,3 +796,92 @@
     width: 350px;
     line-height: 1.5;
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+
+/* Tablet (768px and below) */
+@media (max-width: 768px) {
+    .home h1 {
+        font-size: 36px;
+    }
+
+    .home p {
+        font-size: 14px;
+    }
+
+    .maincont {
+        width: 95%;
+        height: auto;
+        padding: 10px;
+        margin: 20px auto;
+    }
+
+    .search-tabs {
+        margin: 10px 0;
+        flex-wrap: wrap;
+    }
+
+    .tab {
+        padding: 10px 15px;
+        font-size: 12px;
+    }
+
+    .booking-bar {
+        width: 100%;
+        flex-direction: column;
+        margin: 10px auto;
+        padding: 10px;
+    }
+
+    .input-field {
+        border-right: none;
+        border-bottom: 1px solid #eee;
+        padding: 10px 5px;
+        margin-bottom: 10px;
+    }
+
+    .input-field.no-border {
+        border-bottom: none;
+    }
+
+    .input-field label {
+        font-size: 11px;
+    }
+
+    .input-field input,
+    .input-field select {
+        font-size: 12px;
+    }
+}
+
+/* Mobile (480px and below) */
+@media (max-width: 480px) {
+    .section-1 {
+        height: 80vh;
+    }
+
+    .home h1 {
+        font-size: 28px;
+        text-align: center;
+    }
+
+    .home p {
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .maincont {
+        width: 95%;
+        padding: 10px;
+    }
+
+    .booking-bar {
+        width: 100%;
+        padding: 8px;
+    }
+
+    .testimonial-text {
+        width: 100%;
+        font-size: 11px;
+    }
+}

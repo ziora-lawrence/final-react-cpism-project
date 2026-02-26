@@ -25,6 +25,7 @@ const Nav = () => {
   const [showForgotPass, setshowForgotPass] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const [hamburgerOpen, setHamburgerOpen] = useState(false);
 
   // Check if user is logged in on mount and when location changes
   useEffect(() => {
@@ -49,7 +50,19 @@ const Nav = () => {
     >
       <nav className="nav">
         <img src={logo} alt="logo" className="logo" />
-        <ul>
+        
+        {/* Hamburger Menu Button */}
+        <button 
+          className={`hamburger-btn ${hamburgerOpen ? "open" : ""}`}
+          onClick={() => setHamburgerOpen(!hamburgerOpen)}
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        {/* Desktop Navigation */}
+        <ul className={`nav-links ${hamburgerOpen ? "mobile-open" : ""}`}>
           <Link to="/">
             <li className={isHomePage ? "active-link" : ""}>Home</li>
           </Link>
@@ -63,7 +76,9 @@ const Nav = () => {
             <li className={isContactPage ? "active-link" : ""}>contact us</li>
           </Link>
         </ul>
-        <div className="nav-btns">
+
+        {/* Navigation Buttons */}
+        <div className={`nav-btns ${hamburgerOpen ? "mobile-open" : ""}`}>
           <select className={!isHomePage ? "dark-select" : ""}>
             <option value="eng">eng</option>
             <option value="fr">fr</option>
@@ -72,10 +87,16 @@ const Nav = () => {
           {!isLoggedIn ? (
             // Show Login and Signup buttons when NOT logged in
             <>
-              <button className="login" onClick={() => setShowLogin(true)}>
+              <button className="login" onClick={() => {
+                setShowLogin(true);
+                setHamburgerOpen(false);
+              }}>
                 Login
               </button>
-              <button className="signup" onClick={() => setShowsignup(true)}>
+              <button className="signup" onClick={() => {
+                setShowsignup(true);
+                setHamburgerOpen(false);
+              }}>
                 sign up
               </button>
             </>
@@ -93,17 +114,26 @@ const Nav = () => {
                 <div className="dropdown-menu">
                   <ul>
                     <li>
-                      <Link to="/account" onClick={() => setMenuOpen(false)}>
+                      <Link to="/account" onClick={() => {
+                        setMenuOpen(false);
+                        setHamburgerOpen(false);
+                      }}>
                         My Tickets
                       </Link>
                     </li>
                     <li>
-                      <Link to="/account" onClick={() => setMenuOpen(false)}>
+                      <Link to="/account" onClick={() => {
+                        setMenuOpen(false);
+                        setHamburgerOpen(false);
+                      }}>
                         Settings
                       </Link>
                     </li>
                     <hr />
-                    <li className="logout-btn" onClick={handleLogout}>
+                    <li className="logout-btn" onClick={() => {
+                      handleLogout();
+                      setHamburgerOpen(false);
+                    }}>
                       Logout
                     </li>
                   </ul>

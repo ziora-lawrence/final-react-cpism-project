@@ -143,3 +143,90 @@
     line-height: 1.2;
     margin-top: 6px;
 }
+
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .tit {
+        padding-left: 80px;
+        font-size: 16px;
+    }
+
+    .tourpackagessection {
+        height: auto;
+    }
+
+    .tourpackages {
+        grid-template-columns: repeat(3, 1fr);
+        padding: 30px 80px;
+        gap: 20px;
+    }
+
+    .tourimg {
+        width: 100%;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    .tit {
+        padding-left: 20px;
+        padding-top: 100px;
+        font-size: 14px;
+    }
+
+    .tourpackages {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 20px;
+        gap: 15px;
+    }
+
+    .tourcard {
+        padding-bottom: 20px;
+    }
+
+    .tourimg {
+        width: 100%;
+        height: 180px;
+    }
+
+    .tourtitle {
+        font-size: 14px;
+    }
+
+    .servicepara {
+        width: 100%;
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 480px) {
+    .tit {
+        padding-left: 15px;
+        font-size: 12px;
+    }
+
+    .tourpackages {
+        grid-template-columns: 1fr;
+        padding: 15px;
+    }
+
+    .tourimg {
+        height: 160px;
+    }
+
+    .tourtitle {
+        font-size: 12px;
+        margin-top: 5px;
+    }
+
+    .layer1t {
+        column-gap: 5px;
+        margin-top: 8px;
+        font-size: 11px;
+    }
+
+    .servicepara {
+        font-size: 10px;
+        margin-top: 4px;
+    }
+}

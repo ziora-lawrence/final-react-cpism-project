@@ -185,3 +185,53 @@
     box-shadow: 0 10px 25px rgba(0,0,0,0.1);
 }
 
+/* ===== RESPONSIVE STYLES ===== */
+@media (max-width: 1024px) {
+    .aboutus h1 {
+        font-size: 36px;
+    }
+
+    .aboutus p {
+        font-size: 14px;
+        width: 80%;
+    }
+}
+
+@media (max-width: 768px) {
+    .aboutus {
+        height: auto;
+        min-height: 100vh;
+        padding: 100px 20px;
+    }
+
+    .aboutus h1 {
+        font-size: 28px;
+        margin-top: 20px;
+    }
+
+    .aboutus p {
+        font-size: 13px;
+        width: 100%;
+        padding: 0 10px;
+    }
+
+    .aboutus button {
+        padding: 8px 16px;
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .aboutus h1 {
+        font-size: 24px;
+    }
+
+    .aboutus p {
+        font-size: 12px;
+    }
+
+    .aboutus button {
+        padding: 7px 14px;
+        font-size: 12px;
+    }
+}

@@ -1,26 +1,40 @@
-.container{
+.container {
     padding: 10px 150px;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.3s ease;
+    box-sizing: border-box;
+}
+
+/* Responsive container padding */
+@media (max-width: 1200px) {
+    .container {
+        padding: 10px 80px;
+    }
+}
+
+@media (max-width: 768px) {
+    .container {
+        padding: 10px 20px;
+    }
+}
+
+/* Home Page specific */
+.nav-home {
+    background-color: rgba(173, 131, 131, 0.553);
+}
+
+/* About Us specific */
+.nav-about {
+    background-color: #FFFFFF33;
     position: absolute;
     width: 100%;
     z-index: 10;
     transition: all 0.3s ease;
 }
 
-/* Home Page specific (Transparent/Glass) */
-.nav-home {
-    background-color: rgba(173, 131, 131, 0.553);
-}
-
-/* About Us specific (e.g., Solid Dark background) */
-.nav-about {
-    background-color: #FFFFFF33;
-    position: absolute;
-    width: 100%;
-    z-index: 10;
-    transition: all 0.3s ease;/* Change from absolute if it shouldn't overlap content */
-}
-
-/* Tours Page specific (e.g., Light background with dark text) */
+/* Tours Page specific */
 .nav-tours {
     background-color: white;
     border-bottom: 1px solid #ddd;
@@ -32,7 +46,7 @@
     border-bottom: 1px solid #ddd;
 }
 
-/* Account Page specific (White background with black text) */
+/* Account Page specific */
 .nav-account {
     background-color: white;
     border-bottom: 1px solid #ddd;
@@ -40,91 +54,174 @@
     color: black;
 }
 
-/* Style changes for text colors on light navbars */
-.nav-tours li, .nav-tours select, .nav-tours .login, .nav-contact li, .nav-contact select,.nav-contact .login {
-    color: black;
-}
-
+/* Text colors on light navbars */
+.nav-tours li, .nav-tours select, .nav-tours .login, 
+.nav-contact li, .nav-contact select, .nav-contact .login,
 .nav-account li, .nav-account select, .nav-account .login {
     color: black;
 }
 
-/* Active Link styling to show which page you are on */
+/* Hamburger menu styling for light backgrounds */
+.nav-tours .hamburger-btn span,
+.nav-contact .hamburger-btn span,
+.nav-account .hamburger-btn span {
+    background-color: black;
+}
+
+/* Active Link styling */
 .active-link {
     font-weight: bold;
     border-bottom: 2px solid #FA8B02;
 }
 
-.nav{
+/* Main Navigation Container */
+.nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 100%;
+    position: relative;
 }
 
-.nav img{
+.nav img {
     width: 80px;
     height: 80px;
     cursor: pointer;
     transition: all 0.5s ease;
+    flex-shrink: 0;
 }
 
-.nav img:hover{
-    scale: 1.1; 
-
+@media (max-width: 768px) {
+    .nav img {
+        width: 60px;
+        height: 60px;
+    }
 }
 
-.nav ul{
+.nav img:hover {
+    scale: 1.1;
+}
+
+/* Navigation Links (horizontal on desktop) */
+.nav-links {
     display: flex;
     list-style: none;
     column-gap: 20px;
     color: white;
+    flex: 1;
+    justify-content: center;
+    align-items: center;
 }
 
-.nav-btns{
+/* Mobile Navigation Links */
+@media (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        gap: 0 !important;
+        display: none !important;
+        width: 100%;
+        padding: 20px 0;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-links.mobile-open {
+        display: flex !important;
+    }
+
+    .nav-links li {
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        text-align: left;
+        width: 100%;
+    }
+}
+
+/* Navigation Buttons Container */
+.nav-btns {
     display: flex;
     column-gap: 5px;
-
+    align-items: center;
+    flex-shrink: 0;
 }
 
-.login{
+/* Mobile Navigation Buttons */
+@media (max-width: 768px) {
+    .nav-btns {
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.9);
+        flex-direction: column;
+        gap: 10px !important;
+        display: none !important;
+        width: 100%;
+        padding: 20px;
+        align-items: stretch;
+        border-top: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    .nav-btns.mobile-open {
+        display: flex !important;
+    }
+
+    .nav-btns select,
+    .nav-btns .login,
+    .nav-btns .signup {
+        width: 100%;
+        padding: 12px !important;
+    }
+}
+
+/* Login Button */
+.login {
     padding: 10px 20px;
     border: none;
     background-color: transparent;
     cursor: pointer;
     transition: all 0.5s ease;
+    color: white;
 }
 
-.login:hover{
+.login:hover {
     background-color: white;
     color: black;
     scale: 1.05;
     border-radius: 20px;
 }
 
-.nav-btns select{
+/* Select Dropdown */
+.nav-btns select {
     border: 1px solid white;
     background-color: transparent;
     cursor: pointer;
     outline: none;
-    border: none;
+    color: white;
 }
 
-.signup{
+/* Signup Button */
+.signup {
     padding: 10px 35px;
     background-color: #FA8B02;
     border-radius: 20px;
     border: none;
     cursor: pointer;
     transition: all 0.5s ease;
+    color: white;
 }
 
-.signup:hover{
+.signup:hover {
     background-color: white;
     color: black;
     scale: 1.05;
 }
 
-/* Target the links specifically to remove default underlines */
+/* Navigation Links */
 .nav ul a {
     text-decoration: none;
     color: inherit;
@@ -132,85 +229,137 @@
 
 /* User Profile Icon */
 .logged-user-icon {
-  width: 45px;
-  height: 45px;
-  cursor: pointer;
-  border-radius: 50%;
-  border: 2px solid transparent;
-  transition: border-color 0.3s, background-color 0.3s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 24px;
-  background-color: transparent;
-  color: white;
+    width: 45px;
+    height: 45px;
+    cursor: pointer;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    transition: border-color 0.3s, background-color 0.3s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 24px;
+    background-color: transparent;
+    color: white;
+    flex-shrink: 0;
 }
 
-.logged-user-icon img{
+.logged-user-icon img {
     width: 100%;
     height: 100%;
+    border-radius: 50%;
 }
 
 .logged-user-icon:hover {
-  border-color: #FA8B02;
+    border-color: #FA8B02;
+}
+
+/* Hamburger Menu Button */
+.hamburger-btn {
+    display: none;
+    flex-direction: column;
+    background: none;
+    border: none;
+    cursor: pointer;
+    gap: 5px;
+    padding: 10px;
+    z-index: 1001;
+}
+
+.hamburger-btn span {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .hamburger-btn {
+        display: flex;
+    }
+}
+
+.hamburger-btn.open span:nth-child(1) {
+    transform: rotate(45deg) translate(10px, 10px);
+}
+
+.hamburger-btn.open span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger-btn.open span:nth-child(3) {
+    transform: rotate(-45deg) translate(7px, -7px);
 }
 
 /* Dropdown Container */
 .user-menu-container {
-  position: relative;
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
 }
 
-/* The actual dropdown box */
+/* Dropdown Menu - Initially Hidden */
 .dropdown-menu {
-  position: absolute;
-  top: 55px;
-  right: 0;
-  background-color: white;
-  min-width: 150px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
-  border-radius: 12px;
-  padding: 10px 0;
-  z-index: 100;
-  overflow: hidden;
+    position: absolute;
+    top: 55px;
+    right: 0;
+    background-color: white;
+    min-width: 180px;
+    box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+    border-radius: 12px;
+    padding: 10px 0;
+    z-index: 1000;
+    overflow: hidden;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu {
+        top: 50px;
+        min-width: 200px;
+    }
 }
 
 .dropdown-menu ul {
-  display: flex;
-  flex-direction: column; /* Stack vertically instead of horizontal like the main nav */
-  padding: 0;
-  margin: 0;
-  gap: 0; /* Remove the nav gap */
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    gap: 0;
 }
 
 .dropdown-menu ul li {
-  padding: 12px 20px;
-  color: #333 !important; /* Force dark text on white background */
-  font-size: 14px;
-  cursor: pointer;
-  transition: background 0.2s;
+    padding: 12px 20px;
+    color: #333 !important;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background 0.2s;
 }
 
 .dropdown-menu ul li a {
-  color: #333;
-  text-decoration: none;
+    color: #333;
+    text-decoration: none;
 }
 
 .dropdown-menu ul li:hover {
-  background-color: #f5f5f5;
-  color: #FA8B02 !important;
+    background-color: #f5f5f5;
+    color: #FA8B02 !important;
 }
 
 .dropdown-menu hr {
-  border: none;
-  border-top: 1px solid #eee;
-  margin: 5px 0;
+    border: none;
+    border-top: 1px solid #eee;
+    margin: 5px 0;
 }
 
 .logout-btn {
-  color: #e74c3c !important; /* Red for logout */
-  font-weight: bold;
+    color: #e74c3c !important;
+    font-weight: bold;
 }
 
-.usericon1{
-    width: 400px;
+.usericon1 {
+    width: 100%;
+    height: 100%;
 }

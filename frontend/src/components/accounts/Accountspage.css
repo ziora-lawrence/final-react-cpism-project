@@ -170,9 +170,99 @@
 
 /* Responsive */
 @media (max-width: 1024px) {
-  .packages-grid { grid-template-columns: repeat(2, 1fr); }
+  .packages-grid { 
+    grid-template-columns: repeat(2, 1fr); 
+  }
+
+  .account-page {
+    padding: 100px 5% 60px 5%;
+  }
 }
 
-@media (max-width: 600px) {
-  .packages-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  .account-page {
+    padding: 80px 20px 60px 20px;
+  }
+
+  .welcome-section {
+    padding: 20px;
+    margin-bottom: 40px;
+  }
+
+  .welcome-section h1 {
+    font-size: 22px;
+  }
+
+  .welcome-section p {
+    font-size: 14px;
+  }
+
+  .section-title {
+    font-size: 20px;
+    margin-bottom: 30px;
+  }
+
+  .packages-grid { 
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .empty-img {
+    width: 250px;
+  }
+
+  .section-header {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .carousel-controls {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .account-page {
+    padding: 70px 15px 50px 15px;
+  }
+
+  .welcome-section {
+    padding: 15px;
+    margin-bottom: 30px;
+  }
+
+  .welcome-section h1 {
+    font-size: 18px;
+  }
+
+  .welcome-section p {
+    font-size: 12px;
+  }
+
+  .section-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .card-title {
+    font-size: 14px;
+  }
+
+  .card-desc {
+    font-size: 11px;
+  }
+
+  .card-image img {
+    height: 180px;
+  }
+
+  .empty-img {
+    width: 100%;
+  }
+
+  .empty-text {
+    font-size: 12px;
+    padding: 0 10px;
+  }
 }

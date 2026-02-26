@@ -1,0 +1,82 @@
+/* Global Responsive Styles */
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Base responsive text sizing */
+@media (max-width: 1200px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    body {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        font-size: 12px;
+    }
+}
+
+/* Ensure images don't overflow */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Responsive form elements */
+input, textarea, select, button {
+    font-size: inherit;
+    font-family: inherit;
+}
+
+/* Ensure proper viewport scaling */
+@viewport {
+    width: device-width;
+    zoom: 1;
+}
+
+/* Hide scrollbar on mobile for cleaner look (optional) */
+@media (max-width: 768px) {
+    ::-webkit-scrollbar {
+        width: 6px;
+    }
+
+    ::-webkit-scrollbar-track {
+        background: transparent;
+    }
+
+    ::-webkit-scrollbar-thumb {
+        background: rgba(0, 0, 0, 0.3);
+        border-radius: 3px;
+    }
+}
+
+/* Flexbox and grid responsive adjustments */
+@media (max-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+
+/* Touch target sizing for mobile */
+@media (max-width: 768px) {
+    button, input[type="button"], input[type="submit"], a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
