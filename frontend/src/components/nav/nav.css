@@ -70,25 +70,6 @@
     background-color: black;
 }
 
-/* Nav links color override for light backgrounds */
-.nav-tours .nav-links li,
-.nav-contact .nav-links li,
-.nav-account .nav-links li {
-    color: black !important;
-}
-
-.nav-tours .nav-links a,
-.nav-contact .nav-links a,
-.nav-account .nav-links a {
-    color: black !important;
-}
-
-.nav-tours .nav-links li:hover,
-.nav-contact .nav-links li:hover,
-.nav-account .nav-links li:hover {
-    color: #FA8B02 !important;
-}
-
 /* Active Link styling */
 .active-link {
     font-weight: bold;
@@ -167,8 +148,8 @@
 
     .nav-links.mobile-open {
         display: flex !important;
-        position: fixed;
-        top: 80px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
         width: 100%;
@@ -224,7 +205,7 @@
 
     .nav-btns.mobile-open {
         display: flex !important;
-        position: fixed;
+        position: absolute;
         top: auto;
         width: 100%;
         z-index: 99;
