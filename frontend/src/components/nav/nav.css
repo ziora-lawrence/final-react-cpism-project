@@ -70,6 +70,25 @@
     background-color: black;
 }
 
+/* Nav links color override for light backgrounds */
+.nav-tours .nav-links li,
+.nav-contact .nav-links li,
+.nav-account .nav-links li {
+    color: black !important;
+}
+
+.nav-tours .nav-links a,
+.nav-contact .nav-links a,
+.nav-account .nav-links a {
+    color: black !important;
+}
+
+.nav-tours .nav-links li:hover,
+.nav-contact .nav-links li:hover,
+.nav-account .nav-links li:hover {
+    color: #FA8B02 !important;
+}
+
 /* Active Link styling */
 .active-link {
     font-weight: bold;
@@ -133,22 +152,27 @@
 /* Mobile Navigation Links */
 @media (max-width: 768px) {
     .nav-links {
-        position: fixed;
-        top: 80px;
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        width: 100%;
         background-color: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         gap: 0 !important;
         display: none !important;
         padding: 0;
         border-top: 2px solid #FA8B02;
-        z-index: 999;
+        z-index: 100;
     }
 
     .nav-links.mobile-open {
         display: flex !important;
+        position: fixed;
+        top: 80px;
+        left: 0;
+        right: 0;
+        width: 100%;
+        z-index: 100;
     }
 
     .nav-links li {
@@ -184,11 +208,10 @@
 /* Mobile Navigation Buttons */
 @media (max-width: 768px) {
     .nav-btns {
-        position: fixed;
-        top: calc(80px + (4 * 50px));
+        position: absolute;
+        top: 100%;
         left: 0;
         right: 0;
-        width: 100%;
         background-color: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         gap: 10px !important;
@@ -196,11 +219,15 @@
         padding: 15px;
         align-items: stretch;
         border-top: 2px solid #FA8B02;
-        z-index: 998;
+        z-index: 99;
     }
 
     .nav-btns.mobile-open {
         display: flex !important;
+        position: fixed;
+        top: auto;
+        width: 100%;
+        z-index: 99;
     }
 
     .nav-btns select,
