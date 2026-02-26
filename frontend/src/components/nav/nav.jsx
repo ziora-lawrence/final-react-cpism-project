@@ -63,16 +63,16 @@ const Nav = () => {
 
         {/* Desktop Navigation */}
         <ul className={`nav-links ${hamburgerOpen ? "mobile-open" : ""}`}>
-          <Link to="/">
+          <Link to="/" onClick={() => setHamburgerOpen(false)}>
             <li className={isHomePage ? "active-link" : ""}>Home</li>
           </Link>
-          <Link to="/about">
+          <Link to="/about" onClick={() => setHamburgerOpen(false)}>
             <li className={isAboutPage ? "active-link" : ""}>about us</li>
           </Link>
-          <Link to="/tours">
+          <Link to="/tours" onClick={() => setHamburgerOpen(false)}>
             <li className={isToursPage ? "active-link" : ""}>Tour packages</li>
           </Link>
-          <Link to="/contact">
+          <Link to="/contact" onClick={() => setHamburgerOpen(false)}>
             <li className={isContactPage ? "active-link" : ""}>contact us</li>
           </Link>
         </ul>

@@ -115,19 +115,35 @@
     align-items: center;
 }
 
+.nav-links a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.nav-links li {
+    color: white;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.nav-links li:hover {
+    color: #FA8B02;
+}
+
 /* Mobile Navigation Links */
 @media (max-width: 768px) {
     .nav-links {
-        position: absolute;
-        top: 100%;
+        position: fixed;
+        top: 80px;
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         gap: 0 !important;
         display: none !important;
-        padding: 15px 0;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0;
+        border-top: 2px solid #FA8B02;
         z-index: 999;
     }
 
@@ -136,10 +152,23 @@
     }
 
     .nav-links li {
-        padding: 12px 15px;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 15px 20px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.15);
         text-align: left;
         width: 100%;
+        color: white !important;
+        font-size: 15px;
+        font-weight: 500;
+    }
+
+    .nav-links a {
+        color: white !important;
+        display: block;
+    }
+
+    .nav-links li:hover {
+        background-color: rgba(250, 139, 2, 0.2);
+        color: #FA8B02 !important;
     }
 }
 
@@ -149,23 +178,25 @@
     column-gap: 5px;
     align-items: center;
     flex-shrink: 0;
+    position: relative;
 }
 
 /* Mobile Navigation Buttons */
 @media (max-width: 768px) {
     .nav-btns {
-        position: absolute;
-        top: calc(100% + 50px);
+        position: fixed;
+        top: calc(80px + (4 * 50px));
         left: 0;
         right: 0;
-        background-color: rgba(0, 0, 0, 0.95);
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.98);
         flex-direction: column;
         gap: 10px !important;
         display: none !important;
         padding: 15px;
         align-items: stretch;
-        border-top: 1px solid rgba(255, 255, 255, 0.1);
-        z-index: 999;
+        border-top: 2px solid #FA8B02;
+        z-index: 998;
     }
 
     .nav-btns.mobile-open {
@@ -176,8 +207,19 @@
     .nav-btns .login,
     .nav-btns .signup {
         width: 100%;
-        padding: 10px 12px !important;
-        font-size: 14px;
+        padding: 12px;
+        font-size: 15px;
+        border: 1px solid rgba(255, 255, 255, 0.2);
+        border-radius: 8px;
+        background-color: transparent;
+        color: white;
+        cursor: pointer;
+    }
+
+    .nav-btns .signup {
+        background-color: #FA8B02;
+        border-color: #FA8B02;
+        font-weight: 600;
     }
 }
 
