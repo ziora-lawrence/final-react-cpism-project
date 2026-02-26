@@ -1,9 +1,58 @@
 .container{
-    background-color: rgba(173, 131, 131, 0.553);
     padding: 10px 150px;
     position: absolute;
     width: 100%;
     z-index: 10;
+    transition: all 0.3s ease;
+}
+
+/* Home Page specific (Transparent/Glass) */
+.nav-home {
+    background-color: rgba(173, 131, 131, 0.553);
+}
+
+/* About Us specific (e.g., Solid Dark background) */
+.nav-about {
+    background-color: #FFFFFF33;
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    transition: all 0.3s ease;/* Change from absolute if it shouldn't overlap content */
+}
+
+/* Tours Page specific (e.g., Light background with dark text) */
+.nav-tours {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    color: black;
+}
+
+.nav-contact {
+    border-bottom: 1px solid #ddd;
+}
+
+/* Account Page specific (White background with black text) */
+.nav-account {
+    background-color: white;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    color: black;
+}
+
+/* Style changes for text colors on light navbars */
+.nav-tours li, .nav-tours select, .nav-tours .login, .nav-contact li, .nav-contact select,.nav-contact .login {
+    color: black;
+}
+
+.nav-account li, .nav-account select, .nav-account .login {
+    color: black;
+}
+
+/* Active Link styling to show which page you are on */
+.active-link {
+    font-weight: bold;
+    border-bottom: 2px solid #FA8B02;
 }
 
 .nav{
@@ -56,7 +105,8 @@
     border: 1px solid white;
     background-color: transparent;
     cursor: pointer;
-
+    outline: none;
+    border: none;
 }
 
 .signup{
@@ -72,4 +122,95 @@
     background-color: white;
     color: black;
     scale: 1.05;
+}
+
+/* Target the links specifically to remove default underlines */
+.nav ul a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* User Profile Icon */
+.logged-user-icon {
+  width: 45px;
+  height: 45px;
+  cursor: pointer;
+  border-radius: 50%;
+  border: 2px solid transparent;
+  transition: border-color 0.3s, background-color 0.3s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 24px;
+  background-color: transparent;
+  color: white;
+}
+
+.logged-user-icon img{
+    width: 100%;
+    height: 100%;
+}
+
+.logged-user-icon:hover {
+  border-color: #FA8B02;
+}
+
+/* Dropdown Container */
+.user-menu-container {
+  position: relative;
+}
+
+/* The actual dropdown box */
+.dropdown-menu {
+  position: absolute;
+  top: 55px;
+  right: 0;
+  background-color: white;
+  min-width: 150px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  border-radius: 12px;
+  padding: 10px 0;
+  z-index: 100;
+  overflow: hidden;
+}
+
+.dropdown-menu ul {
+  display: flex;
+  flex-direction: column; /* Stack vertically instead of horizontal like the main nav */
+  padding: 0;
+  margin: 0;
+  gap: 0; /* Remove the nav gap */
+}
+
+.dropdown-menu ul li {
+  padding: 12px 20px;
+  color: #333 !important; /* Force dark text on white background */
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.dropdown-menu ul li a {
+  color: #333;
+  text-decoration: none;
+}
+
+.dropdown-menu ul li:hover {
+  background-color: #f5f5f5;
+  color: #FA8B02 !important;
+}
+
+.dropdown-menu hr {
+  border: none;
+  border-top: 1px solid #eee;
+  margin: 5px 0;
+}
+
+.logout-btn {
+  color: #e74c3c !important; /* Red for logout */
+  font-weight: bold;
+}
+
+.usericon1{
+    width: 400px;
 }

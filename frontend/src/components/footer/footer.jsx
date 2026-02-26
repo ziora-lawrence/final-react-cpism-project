@@ -6,13 +6,12 @@ const Footer = () => {
   return (
     <footer className="main-footer">
       <div className="footer-container">
-        {/* Logo Section - Now at the very top */}
+        {/* Logo at the very top, centered to match Figma */}
         <div className="footer-logo-top">
           <img src={logo} alt="Tours in Tuscany" className="logo-image" />
         </div>
 
         <div className="footer-top">
-          {/* Links Grid */}
           <div className="footer-links-grid">
             <div className="footer-col">
               <h4>Services</h4>

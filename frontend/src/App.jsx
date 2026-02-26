@@ -6,6 +6,7 @@ import Aboutus from './components/pages/aboutus.jsx'
 import Tourpackages from './components/pages/tourpackages.jsx'
 import Contactus from './components/pages/contactus.jsx'
 import Footer from './components/footer/footer.jsx'
+import Account from './components/accounts/accounts.jsx'
 const App = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/about" element={<Aboutus />} />
         <Route path="/tours" element={<Tourpackages />} />
         <Route path="/contact" element={<Contactus />} />
+        <Route path="/account" element={<Account />} />
       </Routes>
       <Footer />
     </>

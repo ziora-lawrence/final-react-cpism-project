@@ -1,0 +1,178 @@
+.account-page {
+  padding: 120px 10% 80px 10%;
+  background-color: #fff;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.welcome-section {
+  margin-bottom: 60px;
+  padding: 30px;
+  background: linear-gradient(135deg, #FA8B02 0%, #f5a839 100%);
+  border-radius: 15px;
+  color: white;
+}
+
+.welcome-section h1 {
+  font-size: 28px;
+  font-weight: 800;
+  margin: 0 0 10px 0;
+}
+
+.welcome-section p {
+  font-size: 16px;
+  margin: 0;
+  opacity: 0.9;
+}
+
+.section-title {
+  font-size: 24px;
+  font-weight: 800;
+  color: #333;
+  margin-bottom: 40px;
+}
+
+/* My Tickets Empty State */
+.tickets-section {
+  margin-bottom: 100px;
+}
+
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.empty-img {
+  width: 350px;
+  margin-bottom: 20px;
+}
+
+.empty-text {
+  color: #777;
+  font-size: 14px;
+}
+
+/* Tour Packages Carousel Header */
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 30px;
+}
+
+.carousel-controls {
+  display: flex;
+  gap: 15px;
+}
+
+.arrow-btn {
+  width: 35px;
+  height: 35px;
+  cursor: pointer;
+  opacity: 0.5;
+}
+
+.arrow-btn.active {
+  opacity: 1;
+}
+
+/* Packages Grid and Cards */
+.packages-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.package-card {
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  transition: transform 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-5px);
+}
+
+.card-image img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 20px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.card-price {
+  display: flex;
+  align-items: baseline;
+  gap: 5px;
+  margin-bottom: 15px;
+}
+
+.card-price .from {
+  font-size: 12px;
+  color: #888;
+}
+
+.card-price .amount {
+  color: #fa8b02;
+  font-weight: 800;
+  font-size: 14px;
+}
+
+.card-meta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #f0f0f0;
+  padding-top: 10px;
+  margin-bottom: 10px;
+}
+
+.meta-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.meta-item img {
+  width: 14px;
+}
+
+.meta-item span {
+  font-size: 10px;
+  font-weight: 700;
+  color: #fa8b02;
+}
+
+.card-desc {
+  font-size: 12px;
+  color: #666;
+  line-height: 1.5;
+  margin-bottom: 15px;
+}
+
+.read-more {
+  color: #fa8b02;
+  font-size: 12px;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+/* Responsive */
+@media (max-width: 1024px) {
+  .packages-grid { grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 600px) {
+  .packages-grid { grid-template-columns: 1fr; }
+}

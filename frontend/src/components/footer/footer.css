@@ -1,5 +1,5 @@
 .main-footer {
-  background-color: #2b2b2b;
+  background-color: #2b2b2b; /* Figma Dark Charcoal */
   color: #ffffff;
   padding-bottom: 20px;
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -8,17 +8,18 @@
 .footer-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 40px 70px 20px 70px;
+  padding: 60px 70px 20px 70px; /* Matched to your project's existing padding */
 }
 
-/* New Logo Positioning */
+/* Updated Logo Positioning to match Figma Header Style */
 .footer-logo-top {
-  margin-bottom: 40px;
-  display: block;
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: flex-start; /* Keeps it left-aligned like the reference image */
 }
 
-.footer-logo-top img {
-  width: 120px; /* Adjusted size based on your image */
+.footer-logo-top .logo-image {
+  width: 130px; /* Slightly larger to match Figma scale */
   height: auto;
 }
 
@@ -37,7 +38,7 @@
 .footer-col h4 {
   font-size: 1rem;
   margin-bottom: 25px;
-  font-weight: bold;
+  font-weight: 800; /* Bolder headers per Figma */
 }
 
 .footer-col ul {
@@ -92,7 +93,7 @@
 .footer-divider {
   border: 0;
   border-top: 1px solid #444;
-  margin: 50px 0 20px 0;
+  margin: 60px 0 20px 0;
 }
 
 .footer-bottom p {
@@ -104,7 +105,7 @@
 /* Mobile Responsiveness */
 @media (max-width: 768px) {
   .footer-logo-top {
-    text-align: center;
+    justify-content: center;
   }
   
   .footer-links-grid {
