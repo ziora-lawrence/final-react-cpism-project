@@ -57,28 +57,15 @@
     grid-template-columns: 1fr 1fr;
     gap: 20px;
     margin-top: 90px;
+    padding: 0 40px;
 }
 
 .left{
     border: none;
-    width: 390px;
-    margin-left: 50px;
+    width: 100%;
+    max-width: 390px;
    
 }
-
-.something-pic{
-    width: 100%;
-    height: auto;
-    border-radius: 20px;
-    transition: all 7s ease;
-
-}
-
-.something-pic:hover{
-    scale: 1.1;
-    rotate: 360deg ;
-}
-
 
 .right{
     display: flex;
@@ -92,7 +79,8 @@
     color: #000000;
     font-weight: 900;
     margin-bottom: 15px;
-    width: 500px;
+    width: 100%;
+    max-width: 500px;
 }
 
 .description{
@@ -100,7 +88,8 @@
     font-family: 'open sans', sans-serif;
     color: #333333;
     line-height: 1.6;
-    width: 400px;
+    width: 100%;
+    max-width: 400px;
 }
 
 .title{
@@ -110,33 +99,56 @@
 
 .stats-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+    grid-template-columns: repeat(4, 1fr);
     gap: 0px;
-    padding: 15px 200px 0px 0px;
+    padding: 15px 40px 0px 40px;
 }
 
-.stat-item h2 {
-    color: #ff9800; /* Matching your orange theme */
-    font-size: 20px;
-    margin-bottom: 5px;
-}
-
-.stat-item p {
-    color: #888;
-    font-size: 10px;
-    line-height: 1.2;
-    font-weight: 500;
-}
-
-/* Responsive Fix for mobile */
-@media (max-width: 900px) {
-    .after-cards {
-        flex-direction: column;
-        text-align: center;
-    }
+@media (max-width: 1024px) {
     .stats-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2x2 on smaller screens */
+        grid-template-columns: repeat(2, 1fr);
         gap: 30px;
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .second {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        margin-top: 50px;
+    }
+
+    .right h1 {
+        font-size: 18px;
+    }
+
+    .description {
+        font-size: 13px;
+    }
+
+    .stats-grid {
+        grid-template-columns: repeat(2, 1fr);
+        padding: 15px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .second {
+        padding: 0 15px;
+    }
+
+    .right h1 {
+        font-size: 16px;
+    }
+
+    .description {
+        font-size: 12px;
+    }
+
+    .stats-grid {
+        grid-template-columns: 1fr;
+        padding: 15px;
     }
 }
 
