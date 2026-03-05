@@ -57,10 +57,13 @@
 }
 
 /* Text colors on light navbars */
-.nav-tours li, .nav-tours select, .nav-tours .login, 
-.nav-contact li, .nav-contact select, .nav-contact .login,
-.nav-account li, .nav-account select, .nav-account .login {
-    color: black;
+.nav-tours .nav-links li, .nav-tours .nav-links a,
+.nav-tours select, .nav-tours .login, 
+.nav-contact .nav-links li, .nav-contact .nav-links a,
+.nav-contact select, .nav-contact .login,
+.nav-account .nav-links li, .nav-account .nav-links a,
+.nav-account select, .nav-account .login {
+    color: black !important;
 }
 
 /* Hamburger menu styling for light backgrounds */

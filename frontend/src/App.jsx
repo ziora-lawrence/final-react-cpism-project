@@ -7,6 +7,7 @@ import Tourpackages from './components/pages/tourpackages.jsx'
 import Contactus from './components/pages/contactus.jsx'
 import Footer from './components/footer/footer.jsx'
 import Account from './components/accounts/accounts.jsx'
+import Toursdetails from './components/tourspages/tourswinetaste/toursdetails.jsx'
 const App = () => {
   return (
     <>
@@ -15,6 +16,7 @@ const App = () => {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<Aboutus />} />
         <Route path="/tours" element={<Tourpackages />} />
+        <Route path="/tours/winetasting" element={<Toursdetails />} />
         <Route path="/contact" element={<Contactus />} />
         <Route path="/account" element={<Account />} />
       </Routes>

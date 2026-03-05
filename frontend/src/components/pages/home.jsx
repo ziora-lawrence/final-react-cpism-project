@@ -7,6 +7,9 @@ import about from "../../assets/about picture.png";
 import weirdwoman from "../../assets/weird woman.png";
 import bycicle from "../../assets/bycicle.png";
 import lyod from "../../assets/lyod.png";
+import { useNavigate } from "react-router-dom";
+import { useState } from "react";
+import Modal from "../modal/modal.jsx";
 
 import {
   FaGlobeAmericas,
@@ -90,6 +93,59 @@ const packages = [
 ];
 
 const Home = () => {
+  const [showbike, setshowbike] = useState(false);
+  const [showpackage, setshowpackage] = useState(false);
+
+  const [name, setname] = useState("");
+  const [email, setemail] = useState("");
+  const [phone, setphone] = useState("");
+  const [service, setservice] = useState("");
+  const [date, setdate] = useState("");
+  const [time, settime] = useState("");
+  const [error, seterror] = useState("");
+  const navigate = useNavigate();
+
+  const handleform = (e) => {
+    e.preventDefault();
+    if (name.trim() === "") {
+      seterror("Please enter your name and surname");
+      return;
+    }
+    if (email.trim() === "") {
+      seterror("Please enter your email address");
+      return;
+    }
+    if (phone.trim() === "") {
+      seterror("Please enter your telephone number");
+      return;
+    }
+    if (service.trim() === "") {
+      seterror("Please select the service type");
+      return;
+    }
+    if (date.trim() === "") {
+      seterror("Please select the date");
+      return;
+    }
+    if (time.trim() === "") {
+      seterror("Please select the time");
+      return;
+    }
+
+    if (isNaN(phone.trim())) {
+      seterror("Please enter a valid phone number");
+      return;
+    }
+
+    setname("");
+    setemail("");
+    setphone("");
+    setservice("");
+    setdate("");
+    settime("");
+    seterror("");
+    setshowbike(true);
+  };
   return (
     <>
       <section
@@ -186,7 +242,7 @@ const Home = () => {
         </div>
 
         <div className="cards">
-          <div className="card">
+          <div className="card" onClick={() => navigate('/tours/luccabike')}>
             <div className="card-image-container">
               <img src={background1} alt="Destination 1" className="card-img" />
             </div>
@@ -213,12 +269,12 @@ const Home = () => {
             </div>
           </div>
 
-          <div className="card">
+          <div className="card" onClick={() => navigate('/tours/winetasting')}>
             <div className="card-image-container">
               <img src={background1} alt="Destination 1" className="card-img" />
             </div>
             <div className="card-content">
-              <h3>Lucca Bike Tour</h3>
+              <h3>Wine tasting In Tuscany</h3>
               <div className="price-row">
                 <span className="price-label">from</span>
                 <span className="price-value">34 €</span>
@@ -239,12 +295,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="card">
+          <div className="card" onClick={() => navigate('/tours/cinqueterre')}>
             <div className="card-image-container">
               <img src={background1} alt="Destination 1" className="card-img" />
             </div>
             <div className="card-content">
-              <h3>Lucca Bike Tour</h3>
+              <h3>Cinque Terre Tour</h3>
               <div className="price-row">
                 <span className="price-label">from</span>
                 <span className="price-value">34 €</span>
@@ -265,12 +321,12 @@ const Home = () => {
               </p>
             </div>
           </div>
-          <div className="card">
+          <div className="card" onClick={() => navigate('/tours/siena')}>
             <div className="card-image-container">
               <img src={background1} alt="Destination 1" className="card-img" />
             </div>
             <div className="card-content">
-              <h3>Lucca Bike Tour</h3>
+              <h3>Siena and Surroundings</h3>
               <div className="price-row">
                 <span className="price-label">from</span>
                 <span className="price-value">34 €</span>
@@ -349,7 +405,7 @@ const Home = () => {
                 <br /> typesetting industry. Lorem Ipsum has been the
                 <br /> industry's standard dummy text ever since the 1500s.
               </p>
-              <button>contact us</button>
+              <button onClick={() => navigate("/contact")}>contact us</button>
             </div>
           </div>
           <div className="weird2">
@@ -397,12 +453,14 @@ const Home = () => {
           <div className="form-left">
             <h1>Book bike now</h1>
             <div className="form-cont">
-              <form>
+              <form onSubmit={handleform}>
                 <div className="form-grid">
                   {/* Row 1 */}
                   <div className="individual-input">
                     <label>Name and Surname</label>
                     <input
+                      value={name}
+                      onChange={(e) => setname(e.target.value)}
                       type="text"
                       placeholder="Enter your name and surname"
                     />
@@ -410,6 +468,8 @@ const Home = () => {
                   <div className="individual-input">
                     <label>Email Address</label>
                     <input
+                      value={email}
+                      onChange={(e) => setemail(e.target.value)}
                       type="email"
                       placeholder="Enter your email address"
                     />
@@ -419,13 +479,18 @@ const Home = () => {
                   <div className="individual-input">
                     <label>Telephone Number</label>
                     <input
+                      value={phone}
+                      onChange={(e) => setphone(e.target.value)}
                       type="tel"
                       placeholder="Enter your telephone number"
                     />
                   </div>
                   <div className="individual-input">
                     <label>Service Type</label>
-                    <select>
+                    <select
+                      value={service}
+                      onChange={(e) => setservice(e.target.value)}
+                    >
                       <option value="" disabled selected>
                         Select the service types
                       </option>
@@ -438,12 +503,24 @@ const Home = () => {
                   {/* Row 3 */}
                   <div className="individual-input">
                     <label>Date</label>
-                    <input type="date" placeholder="Select the date" />
+                    <input
+                      value={date}
+                      onChange={(e) => setdate(e.target.value)}
+                      type="date"
+                      placeholder="Select the date"
+                    />
                   </div>
                   <div className="individual-input">
                     <label>Time</label>
-                    <input type="time" placeholder="Select the time" />
+                    <input
+                      value={time}
+                      onChange={(e) => settime(e.target.value)}
+                      type="time"
+                      placeholder="Select the time"
+                    />
                   </div>
+
+                  {error && <p className="error-message">{error}</p>}
 
                   {/* Submit Button */}
                   <div className="button-container">
@@ -482,7 +559,7 @@ const Home = () => {
                       </li>
                     ))}
                   </ul>
-                  <button className="package-btn">Book Now</button>
+                  <button className="package-btn" onClick={() => setshowpackage(true)}>Book Now</button>
                 </div>
               </div>
             ))}
@@ -506,7 +583,11 @@ const Home = () => {
             {testimonials.map((testi, index) => (
               <div className="testimonial-card" key={index}>
                 <div className="testimonial-header">
-                  <img src={testi.image} alt={testi.name} className="user-avatar" />
+                  <img
+                    src={testi.image}
+                    alt={testi.name}
+                    className="user-avatar"
+                  />
                   <span className="user-name">{testi.name}</span>
                 </div>
                 <p className="testimonial-text">{testi.text}</p>
@@ -515,7 +596,38 @@ const Home = () => {
           </div>
         </div>
       </section>
-    </>
+      <Modal isOpen={showbike} onClose={() => setshowbike(false)}>
+        <div className="bike-success-container">
+          <div className="success-icon">✓</div>
+          <h2 className="success-title">Booking Successful!</h2>
+          <p className="success-text">
+            Congratulations! {name} Your bike has been reserved. Check your email for
+            the booking details and your digital receipt.
+          </p>
+          <button
+            className="success-close-btn"
+            onClick={() => setshowbike(false)}
+          >
+            Great, thanks!
+          </button>
+        </div>
+      </Modal>
+      <Modal isOpen={showpackage} onClose={() => setshowpackage(false)}>
+        <div className="bike-success-container">
+          <div className="success-icon">✓</div>
+          <h2 className="success-title">Booking Successful!</h2>
+          <p className="success-text">
+            Congratulations! you have successfully booked this package. HI MR SAMSON! it woorks trust
+          </p>
+          <button
+            className="success-close-btn"
+            onClick={() => setshowbike(false)}
+          >
+            Great, thanks!
+          </button>
+        </div>
+      </Modal>
+     </>
   );
 };
 

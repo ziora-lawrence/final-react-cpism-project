@@ -532,6 +532,17 @@
     border-radius: 20px;
     border: none;
     padding: 5px 25px;
+    cursor: pointer;
+    transition: all 0.8s ease;
+}
+
+.container-2 button:hover{
+    background-color: white;
+    color: #FA8B02;;
+}
+
+.container-2 button:active{
+    background-color: red;
 }
 
 .weird2{
@@ -999,4 +1010,61 @@
         width: 100%;
         font-size: 11px;
     }
+}
+
+/* Bike Booking Success Popup Styles */
+.bike-success-container {
+  text-align: center;
+  padding: 10px 0;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.success-icon {
+  width: 60px;
+  height: 60px;
+  background-color: #4BB543; /* Success Green */
+  color: white;
+  font-size: 30px;
+  line-height: 60px;
+  border-radius: 50%;
+  margin: 0 auto 20px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.success-title {
+  color: #333;
+  font-size: 24px;
+  font-weight: 800;
+  margin-bottom: 15px;
+}
+
+.success-text {
+  color: #666;
+  font-size: 14px;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.success-close-btn {
+  background-color: #FA8B02; /* Your project orange */
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  border-radius: 25px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s;
+}
+
+.success-close-btn:hover {
+  background-color: #e67e00;
+  transform: scale(1.05);
+}
+
+/* Modal specific override if needed */
+.modal-content {
+  border-top: 5px solid #FA8B02; /* Adds a nice themed top border */
 }
